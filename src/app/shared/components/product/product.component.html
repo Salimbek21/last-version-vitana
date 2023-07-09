@@ -1,0 +1,63 @@
+<div class="container1">
+  <h3 class="headTitle">Продукты</h3>
+  <div class="wrapCard">
+    <div class="wrapCard__firstPart">
+      <div class="wrapCard__firstPart">
+        <div class="inputs">
+          <input class="nameinput" type="text" placeholder="Наименование" />
+          <input class="nameinput" type="text" placeholder="Цена" />
+          <button class="searchBtn">
+            <img src="../../../../assets/search.svg" alt="" /> Найти
+          </button>
+
+          <button class="clearBtn">
+            <img src="../../../../assets/refresh.svg" alt="" /> Сбросить
+          </button>        </div>
+      </div>
+      <div class="wrapCard__addPart">
+        <button (click)="navigate()">Добавить</button>
+      </div>
+    </div>
+  </div>
+  <table class="table1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Наименование</th>
+        <th>Цена</th>
+
+        <th class="optionTable">Действие</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <td class="tb-id">{{ item.id }}</td>
+        <td class="tb-phone">{{ item.name }}</td>
+        <td class="tb-price">{{ item.price | number }} сум</td>
+
+        <!-- <td class="tb-status elementary">Active without a card</td> -->
+        <td class="tb-btn">
+          <div (click)="editForm(item.id)" class="editBtn">
+            <img src="../../../../assets/Icon.svg" /> Посмотреть
+          </div>
+
+          <div (click)="deleteProduct(item.id)" class="deleteBtn">
+            <img src="../../../../assets/delete.svg" /> Удалить
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li
+      *ngFor="
+        let item of collection | paginate : { itemsPerPage: 10, currentPage: p }
+      "
+    >
+      ...
+    </li>
+  </ul>
+
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

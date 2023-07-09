@@ -1,0 +1,19 @@
+<div class="wrapForm">
+  <div class="titlePage">Добавить продукт</div>
+  <form class="wrapForm__form" (submit)="sendForm()" [formGroup]="submitForm">
+    <input
+      formControlName="name"
+      class="nameinput"
+      type="text"
+      placeholder="Наименование"
+    />
+    <input
+      formControlName="price"
+      class="nameinput"
+      type="text"
+      placeholder="Цена"
+
+    />
+    <button class="buttonPrimary">Cохранить</button>
+  </form>
+</div>

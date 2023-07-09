@@ -1,0 +1,164 @@
+.titleMain {
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+  @media (max-width: 700px) {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 80px;
+
+  .wrapInputs {
+    display: flex;
+    flex-direction: column;
+    .wrapForgot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        font-weight: 600;
+      }
+    }
+    gap: 10px;
+    .inputMy {
+      input {
+        width: 100%;
+        outline: none;
+      }
+      .errorSmall {
+        color: red;
+      }
+    }
+  }
+}
+
+.myClass {
+  width: 70%;
+  .otpVerif {
+    width: 435px;
+    margin: 100px auto;
+    gap: 100px;
+    .logoPart {
+      img {
+        width: 50px;
+      }
+    }
+  }
+}
+
+.accessBtn {
+  border: none;
+  width: 60px;
+  height: 60px;
+  background: #00a3ff;
+  box-shadow: 0px 30px 60px rgba(79, 70, 229, 0.15);
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  cursor: pointer;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 700px) {
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+.inputLogin {
+  background: #f3f4f6;
+  border-radius: 8px;
+  border: none;
+  height: 65px;
+  padding-left: 18px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+
+  @media (max-width: 700px) {
+    height: 50px;
+    font-size: 14px;
+  }
+  &:focus {
+    box-shadow: none;
+    border-color: none;
+  }
+  &:focus ~ label {
+    padding-left: 10px;
+  }
+  & ~ label {
+    padding-left: 10px;
+    outline: none !important;
+  }
+}
+.login-panel {
+  max-width: 545px;
+  margin: auto;
+}
+
+.logoPart {
+  width: 100%;
+  max-width: 385px;
+  margin: 100px auto 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  img {
+    width: 50px;
+  }
+}
+
+.bntSubmit {
+  background: #00a3ff;
+  box-shadow: 0px 30px 60px rgba(79, 70, 229, 0.15);
+  border-radius: 6px;
+  width: 100%;
+  height: 55px;
+  border: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.1s;
+  &:hover {
+    box-shadow: 0px 20px 30px #00a2ff48;
+  }
+
+  @media (max-width: 700px) {
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+.signTitle {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4b5563;
+}
+
+.signup {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffd600;
+  cursor: pointer;
+}

@@ -1,0 +1,130 @@
+.container1 {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .wrapCard {
+    margin: 10px;
+    &__firstPart {
+      display: flex;
+      justify-content: space-between;
+      .inputs{
+      display: flex;
+
+        gap: 10px;
+
+      }
+    }
+
+    &__addPart{
+      button{
+        background-color: #00A3FF;
+        border: none;
+        padding: 10px 20px;
+        font-weight: 600;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+  .table1 {
+    width: 100%;
+    border-spacing: 0 5px;
+    border-radius: 8px;
+
+    thead {
+      tr {
+        background: #efefef;
+      }
+    }
+
+    tbody {
+      tr {
+        background-color: #ffffff;
+
+        .tb-id {
+          color: #000000;
+          font-weight: 600;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 16px;
+        }
+
+        .tb-phone {
+          font-weight: 500;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 16px;
+          /* identical to box height */
+
+          color: #333333;
+        }
+
+        .tb-price{
+          color: #000;
+          font-weight: 700;
+        }
+
+        .tb-status {
+          font-weight: 600;
+          &.tb-status.active {
+            color: rgb(20, 209, 20);
+          }
+
+          &.tb-status.deleted {
+            color: red;
+          }
+
+          &.temp-block {
+            color: rgb(253, 95, 95);
+          }
+
+          &.active-without {
+            color: rgb(20, 209, 20);
+          }
+
+          &.elementary {
+            color: rgb(20, 209, 25);
+          }
+        }
+
+        .tb-btn {
+          display: flex;
+          justify-content: center;
+          gap: 5px;
+        }
+      }
+    }
+
+    td,
+    th {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 16px;
+      /* identical to box height */
+
+      color: #333333;
+      border: 1px solid #e6e6e6;
+      border-left: none;
+      border-right: none;
+      text-align: left;
+      padding: 16px;
+
+      &:last-of-type {
+        text-align: center;
+        border-right: 1px solid #dddddd;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+
+      &:first-of-type {
+        border-left: 1px solid #dddddd;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+    }
+  }
+}

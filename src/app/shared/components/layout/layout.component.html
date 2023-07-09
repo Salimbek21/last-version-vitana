@@ -1,0 +1,144 @@
+<!-- <div class="main">
+  <aside class="sidebar" [class.sidebar-close]="!openSidebar">
+    <div class="hamburger-menu">
+      <input
+        type="checkbox"
+        id="checkbox-hamburger-menu"
+        [(ngModel)]="openSidebar"
+      />
+      <label class="label-hamburger-menu" for="checkbox-hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </label>
+    </div>
+    <div class="logo">
+      <img src="../assets/logo.svg" />
+      <div class="logo-details">
+        <span class="logo-text">Dashboard</span>
+        <span class="logo-title">Beepul</span>
+      </div>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li *ngFor="let item of menuSidebar" #itemEl routerLinkActive="active">
+        <div *ngIf="item.sub_menu.length == 0" class="dropdown-title">
+          <a [routerLink]="[item.link]">
+            <i [class]="item.icon"></i>
+            <span class="link_name">{{ item.link_name }}</span>
+          </a>
+        </div>
+        <div
+          *ngIf="item.sub_menu.length > 0"
+          class="dropdown-title"
+          (click)="showSubmenu(itemEl)"
+        >
+          <a>
+            <i [class]="item.icon"></i>
+            <span class="link_name">{{ item.link_name }}</span>
+          </a>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <ul class="sub-menu" [class.blank]="item.sub_menu.length == 0">
+          <li>
+            <a class="link_name">{{ item.link_name }}</a>
+          </li>
+          <li *ngFor="let item_sub of item.sub_menu" routerLinkActive="active">
+            <a [routerLink]="[item_sub.link]">{{ item_sub.link_name }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <section class="home-section">
+    <div class="home-header">
+      <div class="wrapHeaderItems">
+        <div class="title"></div>
+        <div class="dropDown" (click)="showDropDown()">
+          <img src="../../../../assets/users.png" alt="" />
+          <img src="../../../../assets/drop.svg" />
+        </div>
+        <div class="togle" [class.menu-close]="!openMenu">
+          <div class="item" (click)="logout()">
+            <img src="../../../../assets/exit.svg" />
+            <p>Exit</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="home-view">
+      <router-outlet></router-outlet>
+    </div>
+  </section>
+
+</div> -->
+
+<div class="wrapper" [ngClass]="{'sidebarWrap': isSmallScreen}" [class.sidebarWrap]="!openSidebar">
+  <aside class="sidebar" [ngClass]="{'sidebar-close': isSmallScreen}" [class.sidebar-close]="!openSidebar">
+    <div class="logo">
+      <img src="../assets/logo.svg" alt="" />
+      <div class="logoDetails">
+        <span class="logoText">Dashboard</span>
+        <span class="logoTitle">Beepul</span>
+      </div>
+    </div>
+
+    <ul class="menu">
+      <li
+        *ngFor="let item of menuSidebar"
+        #itemEl
+        routerLinkActive="active"
+        #listItem
+      >
+        <a
+          *ngIf="item.sub_menu.length == 0"
+          class="menuLink"
+          [routerLink]="[item.link]"
+        >
+          <i [class]="item.icon"></i>
+          <span class="menuLinkName">{{ item.link_name }}</span>
+        </a>
+
+        <div
+          *ngIf="item.sub_menu.length > 0"
+          class="menuDropdown"
+          (click)="showSubmenu(listItem)"
+        >
+          <i [class]="item.icon"></i>
+          <span class="menuLinkName">{{ item.link_name }}</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+
+        <ul class="subMenu" [class.blank]="item.sub_menu.length == 0">
+          <li *ngFor="let item_sub of item.sub_menu" routerLinkActive="active">
+            <a class="subMenuLink" [routerLink]="[item_sub.link]">{{
+              item_sub.link_name
+            }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+  <header class="header">
+    <div class="wrapItem">
+      <div class="hamburger-menu">
+        <input
+          type="checkbox"
+          id="checkbox-hamburger-menu"
+          [(ngModel)]="openSidebar"
+        />
+        <label class="label-hamburger-menu" for="checkbox-hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </label>
+      </div>
+      <div></div>
+      <button (click)="logout()" class="btnLogout">
+        <img src="../../../../assets/logout.svg" alt="" />
+      </button>
+    </div>
+  </header>
+  <main class="content"><router-outlet></router-outlet></main>
+</div>

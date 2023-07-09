@@ -1,0 +1,42 @@
+<div class="wrapForm">
+  <div class="titlePage">Добавить клиента</div>
+  <form class="wrapForm__form" (submit)="sendForm()" [formGroup]="submitForm">
+    <div class="wrapLabels">
+      <label>Имя Клиента </label>
+      <input
+        formControlName="full_name"
+        class="nameinput"
+        type="text"
+        placeholder="Имя Клиента"
+      />
+    </div>
+    <div class="wrapLabels">
+      <label>Клиентский код </label>
+      <input
+        formControlName="code"
+        class="nameinput"
+        type="text"
+        placeholder="Клиентский код"
+      />
+    </div>
+    <div class="wrapLabels">
+      <label>Номер телефона </label>
+      <input
+        formControlName="phone_number"
+        class="nameinput"
+        type="text"
+        placeholder="Номер телефона клиента"
+      />
+    </div>
+    <div class="wrapLabels">
+      <label>Номер телефона(2) </label>
+      <input
+        formControlName="secondary_phone_number"
+        class="nameinput"
+        type="text"
+        placeholder="Номер телефона(2) клиента"
+      />
+    </div>
+    <button class="buttonPrimary inner">Cохранить</button>
+  </form>
+</div>

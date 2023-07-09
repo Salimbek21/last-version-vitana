@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.nameinput {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  border: 2px solid #e6e6e6;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  padding-left: 10px;
+
+  &::placeholder {
+    color: #c4c4c4;
+  }
+}
+
+.clearBtn{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #00a2ff26 ;
+  border: 2px solid #00A3FF;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  color: #00A3FF;
+}
+
+.searchBtn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #00A3FF;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.buttonPrimary {
+  background-color: #00a3ff;
+  border: none;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 50px;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+  &:hover {
+    box-shadow: #00a2ff32 0px 5px 15px 0px;
+  }
+}
+
+.inner {
+  margin-top: 19px;
+}
+
+.titlePage {
+  margin: 20px 0;
+  color: #000;
+  font-weight: 800;
+}
+
+.headTitle{
+  margin: 20px 10px 20px 10px;
+}
+
+.inputSearch{
+  border: 2px solid #E6E6E6;
+  outline: none;
+  padding-left: 15px;
+}
+
+.deleteBtn {
+  background-color: #ff4f4f;
+  text-align: center;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.editBtn {
+  font-size: 12px;
+  color: #000000;
+  background-color: #00a3ff;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+
+  .fa-eye {
+    font-size: 12px;
+  }
+}
+
+.wrapLabels {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  label {
+    font-size: 13px;
+  }
+}

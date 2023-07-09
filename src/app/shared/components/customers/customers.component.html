@@ -1,0 +1,55 @@
+<div class="container1">
+  <div class="wrapCard">
+    <div class="wrapCard__firstPart">
+      <div class="wrapCard__firstPart"></div>
+      <div class="wrapCard__addPart">
+        <button (click)="navigate()">Добавить</button>
+      </div>
+    </div>
+  </div>
+  <table class="table1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Клиентский код</th>
+        <th>Имя Клиента</th>
+        <th>Номер(тел) клиента</th>
+        <th>Номер(тел-2) клиента</th>
+
+        <th class="optionTable">Действие</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <td class="tb-id">{{ item.id }}</td>
+        <td class="tb-phone">{{ item.code }}</td>
+        <td class="tb-price">{{ item.full_name }}</td>
+        <td class="tb-price">{{ item.phone_number  }}</td>
+        <td class="tb-price">{{ item.secondary_phone_number }}</td>
+
+        <!-- <td class="tb-status elementary">Active without a card</td> -->
+        <td class="tb-btn">
+          <div (click)="editForm(item.id)" class="editBtn">
+            <img src="../../../../assets/Icon.svg" /> Посмотреть
+          </div>
+
+          <div (click)="deleteProduct(item.id)" class="deleteBtn">
+            <img src="../../../../assets/delete.svg" /> Удалить
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li
+      *ngFor="
+        let item of collection | paginate : { itemsPerPage: 10, currentPage: p }
+      "
+    >
+      ...
+    </li>
+  </ul>
+
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

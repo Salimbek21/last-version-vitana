@@ -1,0 +1,44 @@
+<div  class="login-panel">
+  <div class="logoPart flex align-items-center gap-2">
+    <img src="../../../assets/logoMain.svg" class="logo" alt="diamond-layout" />
+
+    <span style="font-size: 1.5rem">Beepul Business</span>
+  </div>
+
+  <form (submit)="onLogin()" [formGroup]="loginForm" class="login-form">
+    <h2 class="titleMain">Добро пожаловать!</h2>
+    <div class="wrapInputs">
+      <div class="inputMy">
+        <input
+          formControlName="username"
+          pInputText
+          placeholder="Логин"
+          id="login"
+          class="inputLogin w-full h-4rem"
+        />
+      </div>
+
+      <div class="inputMy">
+        <input
+          type="password"
+          formControlName="password"
+          pInputText
+          placeholder="Пароль"
+          id="password"
+          class="inputLogin"
+        />
+      </div>
+      <div class="wrapForgot">
+        <button
+          [disabled]="buttonDisabled"
+          type="submit"
+          styleClass="w-full"
+          class="bntSubmit"
+          label=""
+        >
+          Войти
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
